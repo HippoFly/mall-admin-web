@@ -1,7 +1,7 @@
 import request from '@/utils/request'
 export function fetchList(params) {
   return request({
-    url:'/product/list',
+    url:'/mall-admin/product/list',
     method:'get',
     params:params
   })
@@ -9,7 +9,7 @@ export function fetchList(params) {
 
 export function fetchSimpleList(params) {
   return request({
-    url:'/product/simpleList',
+    url:'/mall-portal/product/simpleList',
     method:'get',
     params:params
   })
@@ -17,7 +17,7 @@ export function fetchSimpleList(params) {
 
 export function updateDeleteStatus(params) {
   return request({
-    url:'/product/update/deleteStatus',
+    url:'/mall-portal/product/update/deleteStatus',
     method:'post',
     params:params
   })
@@ -25,7 +25,7 @@ export function updateDeleteStatus(params) {
 
 export function updateNewStatus(params) {
   return request({
-    url:'/product/update/newStatus',
+    url:'/mall-portal/product/update/newStatus',
     method:'post',
     params:params
   })
@@ -33,7 +33,7 @@ export function updateNewStatus(params) {
 
 export function updateRecommendStatus(params) {
   return request({
-    url:'/product/update/recommendStatus',
+    url:'/mall-portal/product/update/recommendStatus',
     method:'post',
     params:params
   })
@@ -41,7 +41,7 @@ export function updateRecommendStatus(params) {
 
 export function updatePublishStatus(params) {
   return request({
-    url:'/product/update/publishStatus',
+    url:'/mall-portal/product/update/publishStatus',
     method:'post',
     params:params
   })
@@ -49,7 +49,7 @@ export function updatePublishStatus(params) {
 
 export function createProduct(data) {
   return request({
-    url:'/product/create',
+    url:'/mall-portal/product/create',
     method:'post',
     data:data
   })
@@ -57,7 +57,7 @@ export function createProduct(data) {
 
 export function updateProduct(id,data) {
   return request({
-    url:'/product/update/'+id,
+    url:'/mall-portal/product/update/'+id,
     method:'post',
     data:data
   })
@@ -65,7 +65,7 @@ export function updateProduct(id,data) {
 
 export function getProduct(id) {
   return request({
-    url:'/product/updateInfo/'+id,
+    url:'/mall-portal/product/updateInfo/'+id,
     method:'get',
   })
 }
