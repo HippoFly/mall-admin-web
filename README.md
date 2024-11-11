@@ -8,13 +8,39 @@
 
 - node: v12.14.0
 
-## 如何安装
+## 注意事项
+node-sass无法下载导致构建失败时可使用如下命令下载；
+
+```shell
+# linux
+SASS_BINARY_SITE=https://npmmirror.com/mirrors/node-sass/ npm install node-sass
+# window
+set SASS_BINARY_SITE=https://npmmirror.com/mirrors/node-sass&& npm install node-sass
+```
+
+这里需要注意的是如果你想使用MinIO实现文件上传的话，需要确保两个上传文件的Vue文件中的useOss:false，现在默认使用的是MinIO，使用OSS需要进行修改；
+![alt text](/static/img/image.png)
+
+## 如何安装与部署
+
+
+### 开发环境 
 
 ```text
 1. npm install
 2. npm run dev
 
 ```
+
+Nginx
+
+```text
+将mall-admin-web和mall-app-web的发行包解压到Nginx的html目录下，目录分别为admin和app；
+然后启动Nginx就可以访问了，后台管理系统访问地址：http://localhost/admin/
+前台商城系统访问地址：http://localhost/app/
+```
+
+![alt text](/static/img/image2.png)
 
 ## 项目介绍
 
